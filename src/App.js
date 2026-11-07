@@ -34,11 +34,6 @@ function App() {
   const fireDart = useCallback(
     throttle(
       ({ x, y, darts }) => {
-        const fire = new Audio(process.env.PUBLIC_URL + "/fire.wav");
-        const volume = Math.random() ** 2 * 0.02 + 0.07;
-        fire.volume = volume;
-        fire.play();
-
         const then = thenRef.current;
 
         let precision = 100;
